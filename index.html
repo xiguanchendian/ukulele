@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>ukulele</title>
+		<link rel="stylesheet" href="css/ukulele.css" />
+		<script type="text/javascript" src="js/ukulele.js" ></script>
+	</head>
+	<body>
+		<div align="center">
+			<h1>ukulele弹奏模拟器v1.0</h1>
+			<table>
+				<tr>
+					<td align="right">
+						<textarea id="temp" class="textarea"></textarea>
+					</td>
+					<td align="left">
+						<input type="button" class="cls" onclick="resetTemp()" />
+					</td>
+				</tr>
+				<tr>
+					<td align="right">
+						<textarea id="replay" class="textarea"></textarea>
+					</td>
+					<td align="left">
+						<input type="button" class="cls" onclick="resetPlay()">
+						<input type="button" class="play" onclick="replay()" />
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div align="center">
+			<h1>Key(1=do 2=re 3=mi 4=fa 5=so 6=la 7=xi 0=i)</h1>
+			<audio src="mp3/1do.mp3" id="do" controls="controls" hidden="hidden"></audio>
+			<audio src="mp3/2re.mp3" id="re" controls="controls" hidden="hidden"></audio>
+			<audio src="mp3/3mi.mp3" id="mi" controls="controls" hidden="hidden"></audio>
+			<audio src="mp3/4fa.mp3" id="fa" controls="controls" hidden="hidden"></audio>
+			<audio src="mp3/5so.mp3" id="so" controls="controls" hidden="hidden"></audio>
+			<audio src="mp3/6la.mp3" id="la" controls="controls" hidden="hidden"></audio>
+			<audio src="mp3/7xi.mp3" id="xi" controls="controls" hidden="hidden"></audio>
+			<audio src="mp3/ido.mp3" id="ido" controls="controls" hidden="hidden"></audio>
+			<input type="button" class="key" id="97" onclick="press()" style="background-image: url(img/1.png);" />
+			<input type="button" class="key" id="98" onclick="press()" style="background-image: url(img/2.png);" />
+			<input type="button" class="key" id="99" onclick="press()" style="background-image: url(img/3.png);" />
+			<input type="button" class="key" id="100" onclick="press()" style="background-image: url(img/4.png);" />
+			<input type="button" class="key" id="101" onclick="press()" style="background-image: url(img/5.png);" />
+			<input type="button" class="key" id="102" onclick="press()" style="background-image: url(img/6.png);" />
+			<input type="button" class="key" id="103" onclick="press()" style="background-image: url(img/7.png);" />
+			<input type="button" class="key" id="96" onclick="press()" style="background-image: url(img/0.png);" />
+		</div>
+		<div align="center">
+			<input type="button" class="demo" id="christmas" onclick="christmas()" style="background-image: url(img/christmas.png);" alt="圣诞歌"/>
+			<input type="button" class="demo" id="star" onclick="star()" style="background-image: url(img/star.png);" alt="小星星"/>
+			<input type="button" class="demo" id="bee" onclick="bee()" style="background-image: url(img/bee.png);" alt="小蜜蜂"/>
+		</div>
+	</body>
+</html>
